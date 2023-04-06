@@ -87,9 +87,10 @@ TEST(TestSuite, binary_plugin_try_start_with_invalid_xml) {
 TEST(TestSuite, binary_plugin_try_start_not_found_plugin) {
   std::shared_ptr<rapidjson::Document> config(new rapidjson::Document);
   config->Parse(
-      "[{\"plugin_name\":\"bnary_loopback::BinaryLoopback\",\"param\":"
+      "[{\"plugin_name\":\"binary_loopback::BinaryLoopback\",\"param\":"
       "\"Parameter\"},{"
       "\"plugin_name\":\"not_found_plugin::NotFoundPlugin\"}]");
+  ROS_INFO("This test produces a ROS_ERROR message because of a loading error in the plugin, but the behavior is as expected.");
 
   // objectを作成し、受信スレッドを開始
   Injector<Annotated<BinaryAnnotation, PluginRouterFactory>> injector(
