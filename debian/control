@@ -1,0 +1,12 @@
+Source: ros-melodic-skyway
+Section: misc
+Priority: optional
+Maintainer: Toshiya Nakakura <t.nakakura@ntt.com>
+Build-Depends: debhelper (>= 9.0.0), libgtest-dev <!nocheck>, ros-melodic-catkin, ros-melodic-message-generation, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-rostest <!nocheck>, ros-melodic-std-msgs
+Homepage: https://github.com/ntt-t3/skyway_for_ros
+Standards-Version: 3.9.2
+
+Package: ros-melodic-skyway
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-message-runtime, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-std-msgs
+Description: Package for using SkyWay from ROS
